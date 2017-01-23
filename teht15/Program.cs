@@ -10,22 +10,24 @@ namespace teht15
     {
         static void Main(string[] args)
         {
-            int num, i, j, k;
+            int num, i, k;
             Console.Write("Anna luku: ");
             num = int.Parse(Console.ReadLine());
-            for (i = 1; i <= num; i++)
+            for (i = 1; i <= num - 2; i++)
             {
-                for (j = 1; j < num - i + 1; j++)
-                {
-                    Console.Write(" ");
-                }
-                for (k = 1; k <= i; k++)
-                {
-                    Console.Write("* ");
-                }
-                Console.WriteLine();
-
+                string padding = String.Concat(Enumerable.Repeat(" ", num - 2 - i));
+                string star = String.Concat(Enumerable.Repeat("*", i + (i - 1)));
+                Console.WriteLine(padding + star);
             }
+
+            for (k = 0; k < 2; k++)
+            {
+                string padding = String.Concat(Enumerable.Repeat(" ", num - 3));
+                Console.WriteLine(padding + "*");
+            }
+                
+
+            
         }
     }
 }
