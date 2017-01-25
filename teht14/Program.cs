@@ -29,6 +29,8 @@ namespace teht14
 
             for (int i = 0; i < arvosanat.Length; i++)
             {
+                //String.Concat ketjuttaa arvot
+                //Enumerable.Repaet tulostaa * niin monta kertaa kuin arvosanat[i] määrää
                 Console.WriteLine(i + ": " + String.Concat(Enumerable.Repeat("*", arvosanat[i])));
             }
         }
