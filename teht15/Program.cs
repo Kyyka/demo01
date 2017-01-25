@@ -22,6 +22,8 @@ namespace teht15
 
             for (k = 0; k < 2; k++)
             {
+                //String.Concat ketjuttaa arvot
+                //Enumerable.Repaet tulostaa " ", num-3 verran
                 string padding = String.Concat(Enumerable.Repeat(" ", num - 3));
                 Console.WriteLine(padding + "*");
             }
